@@ -3317,8 +3317,7 @@ function itemCard(r, staff){
           ? '<a class="notebtn readbtn'+(li ? ' liread' : '')+'" href="'+esc(r.doc_url)+'" target="_blank" rel="noopener">Read &amp; comment</a>'
           : (isPage(r) && r.doc_url === r.live_url ? '' : link(r.doc_url, '', 'Draft')))
       // doc_review_states: a live blog shows its own URL, so the client sees where it is published.
-      + link(r.live_url, 'live', isPage(r) ? 'View page'
-          : (CFG.docReviewStates ? esc(String(r.live_url || '').replace(/^https?:\/\/[^/]+/, '') || 'Live') : 'Live'))
+      + link(r.live_url, 'live', isPage(r) ? 'View page' : 'Live')
       // Pages are built noindexed for the client to review. After approval the delivery team
       // removes the noindex and presses this, which is what moves the page to Live.
       + (staff && isPage(r) && r.approved && r.live_url && r.client_status !== 'live'

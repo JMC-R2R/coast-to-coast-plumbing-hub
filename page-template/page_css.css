@@ -156,3 +156,7 @@
  .pgframe .ccf-cols{grid-template-columns:1fr;gap:10px}
  .pgframe .ccf-cb{flex-direction:column;align-items:center;text-align:center}
 }
+
+/* Embed stills (12/11/2026): live maps, video and tour replaced by snapshots for the mockup */
+.pgframe a.pg-snap{display:block;text-decoration:none}
+.pgframe .cc-map img{display:block;width:100%;height:auto;aspect-ratio:1200/450;object-fit:cover;max-width:none}
